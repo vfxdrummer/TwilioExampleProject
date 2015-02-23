@@ -10,7 +10,7 @@
 #import "SPAPIManager.h"
 #import "TwilioClient.h"
 
-@interface HelloMonkeyViewController() <TCDeviceDelegate>
+@interface HelloMonkeyViewController() <TCDeviceDelegate,TCConnectionDelegate>
 {
     TCDevice* _phone;
     TCConnection* _connection;
@@ -21,6 +21,7 @@
 
 - (void)viewDidLoad
 {
+  [[TwilioClient sharedInstance] setLogLevel:TC_LOG_DEBUG];
 #if TARGET_IPHONE_SIMULATOR
     NSString *name = @"tommy";
 #else
@@ -39,8 +40,9 @@
 
 - (IBAction)dialButtonPressed:(id)sender
 {
-    NSDictionary *params = @{@"To": self.numberField.text};
-    _connection = [_phone connect:params delegate:nil];
+//    NSDictionary *params = @{@"To": self.numberField.text};
+//  _connection = [_phone connect:params delegate:nil];
+  _connection = [_phone connect:nil delegate:self];
 }
 
 - (IBAction)hangupButtonPressed:(id)sender
@@ -67,6 +69,26 @@
 - (void)device:(TCDevice *)device didStopListeningForIncomingConnections:(NSError *)error
 {
     NSLog(@"Device: %@ didStopListeningForIncomingConnections: %@", device, error);
+}
+
+- (void)connection:(TCConnection *)connection didFailWithError:(NSError *)error
+{
+  
+}
+
+- (void)connectionDidConnect:(TCConnection *)connection
+{
+  
+}
+
+- (void)connectionDidDisconnect:(TCConnection *)connection
+{
+  
+}
+
+- (void)connectionDidStartConnecting:(TCConnection *)connection
+{
+  
 }
 
 @end
