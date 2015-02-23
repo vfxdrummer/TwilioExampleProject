@@ -167,7 +167,7 @@
       networkBlock:(void (^)(NSError *))networkBlock
 {
   [self sp_POST:@"token"
-    parameters:@{@"name"   : username}
+    parameters:@{@"client"   : username}
        success:^(id json) {
          NSString* token = json[@"result"];
          

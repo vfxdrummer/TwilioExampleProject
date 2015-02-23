@@ -22,12 +22,7 @@
 - (void)viewDidLoad
 {
   [[TwilioClient sharedInstance] setLogLevel:TC_LOG_DEBUG];
-#if TARGET_IPHONE_SIMULATOR
-    NSString *name = @"tommy";
-#else
-    NSString *name = @"jenny";
-#endif
-  [[SPAPIManager sharedManager] tokenForUser:name
+  [[SPAPIManager sharedManager] tokenForUser:self.fromField.text
                                 successBlock:^void(NSString* token) {
                                   _phone = [[TCDevice alloc] initWithCapabilityToken:token delegate:self];
                                   
@@ -40,9 +35,8 @@
 
 - (IBAction)dialButtonPressed:(id)sender
 {
-//    NSDictionary *params = @{@"To": self.numberField.text};
-//  _connection = [_phone connect:params delegate:nil];
-  _connection = [_phone connect:nil delegate:self];
+    NSDictionary *params = @{@"To": self.toField.text};
+  _connection = [_phone connect:params delegate:self];
 }
 
 - (IBAction)hangupButtonPressed:(id)sender

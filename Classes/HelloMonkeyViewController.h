@@ -9,7 +9,8 @@
 
 @interface HelloMonkeyViewController : UIViewController 
 
-@property (nonatomic, strong) IBOutlet UITextField *numberField;
+@property (nonatomic, strong) IBOutlet UITextField *fromField;
+@property (nonatomic, strong) IBOutlet UITextField *toField;
 
 - (IBAction)dialButtonPressed:(id)sender;
 - (IBAction)hangupButtonPressed:(id)sender;
