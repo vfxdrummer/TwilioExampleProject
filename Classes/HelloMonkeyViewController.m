@@ -35,8 +35,17 @@
 
 - (IBAction)dialButtonPressed:(id)sender
 {
-    NSDictionary *params = @{@"To": self.toField.text};
-  _connection = [_phone connect:params delegate:self];
+  NSDictionary *params = @{@"To": self.toField.text};
+  [[SPAPIManager sharedManager] tokenForUser:self.fromField.text
+                                successBlock:^void(NSString* token) {
+                                  _phone = [[TCDevice alloc] initWithCapabilityToken:token delegate:self];
+                                  _connection = [_phone connect:params delegate:self];
+                                  
+                                } failureBlock:^(NSString* message) {
+                                  
+                                }  networkBlock:^(NSError* error) {
+                                  NSLog(@"Error retrieving token: %@", [error localizedDescription]);
+                                }];
 }
 
 - (IBAction)hangupButtonPressed:(id)sender
