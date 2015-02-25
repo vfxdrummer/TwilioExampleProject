@@ -1,5 +1,5 @@
 //
-//  HelloMonkey.xcconfig
+//  FocusCalling.xcconfig
 //
 
 OTHER_LDFLAGS = $(inherited) -lTwilioClient -ObjC -lcrypto -lssl

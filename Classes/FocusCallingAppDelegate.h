@@ -7,13 +7,13 @@
  
 #import <UIKit/UIKit.h>
 
-@class HelloMonkeyViewController;
+@class FocusCallingViewController;
 @class TCDevice;
 
-@interface HelloMonkeyAppDelegate : NSObject <UIApplicationDelegate>
+@interface FocusCallingAppDelegate : NSObject <UIApplicationDelegate>
 
 @property (nonatomic, strong) IBOutlet UIWindow *window;
-@property (nonatomic, strong) IBOutlet HelloMonkeyViewController *viewController;
+@property (nonatomic, strong) IBOutlet FocusCallingViewController *viewController;
 
 @end
 

@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D3623260D0F684500981E51 /* HelloMonkeyAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* HelloMonkeyAppDelegate.m */; };
+		1D3623260D0F684500981E51 /* FocusCallingAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* FocusCallingAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
-		2899E5220DE3E06400AC0155 /* HelloMonkeyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* HelloMonkeyViewController.xib */; };
+		2899E5220DE3E06400AC0155 /* FocusCallingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* FocusCallingViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
-		28D7ACF80DDB3853001CB0EB /* HelloMonkeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* HelloMonkeyViewController.m */; };
+		28D7ACF80DDB3853001CB0EB /* FocusCallingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* FocusCallingViewController.m */; };
 		80250E2B13B17073009B4E18 /* dial.png in Resources */ = {isa = PBXBuildFile; fileRef = 80250E2A13B17073009B4E18 /* dial.png */; };
 		80250E4313B178C4009B4E18 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80250E4213B178C4009B4E18 /* AudioToolbox.framework */; };
 		80250E4713B178C9009B4E18 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80250E4613B178C9009B4E18 /* CFNetwork.framework */; };
@@ -137,17 +137,17 @@
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D3623240D0F684500981E51 /* HelloMonkeyAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloMonkeyAppDelegate.h; sourceTree = "<group>"; };
-		1D3623250D0F684500981E51 /* HelloMonkeyAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelloMonkeyAppDelegate.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* HelloMonkey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloMonkey.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D3623240D0F684500981E51 /* FocusCallingAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FocusCallingAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* FocusCallingAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FocusCallingAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* FocusCalling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocusCalling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		2899E5210DE3E06400AC0155 /* HelloMonkeyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelloMonkeyViewController.xib; sourceTree = "<group>"; };
+		2899E5210DE3E06400AC0155 /* FocusCallingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FocusCallingViewController.xib; sourceTree = "<group>"; };
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
-		28D7ACF60DDB3853001CB0EB /* HelloMonkeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloMonkeyViewController.h; sourceTree = "<group>"; };
-		28D7ACF70DDB3853001CB0EB /* HelloMonkeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelloMonkeyViewController.m; sourceTree = "<group>"; };
+		28D7ACF60DDB3853001CB0EB /* FocusCallingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FocusCallingViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* FocusCallingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FocusCallingViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		32CA4F630368D1EE00C91783 /* HelloMonkey_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloMonkey_Prefix.pch; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* FocusCalling_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FocusCalling_Prefix.pch; sourceTree = "<group>"; };
 		80250E2A13B17073009B4E18 /* dial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dial.png; path = Images/dial.png; sourceTree = "<group>"; };
 		80250E4213B178C4009B4E18 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		80250E4613B178C9009B4E18 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -317,8 +317,8 @@
 		81FD10001A9A4AF50055432C /* Pods-MMDrawerController.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-MMDrawerController.xcconfig"; sourceTree = "<group>"; };
 		81FD104C1A9A4E5B0055432C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		868E319F1993FAE60059FC01 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* HelloMonkey-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "HelloMonkey-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		E1B51D121A26C19D00FFA698 /* HelloMonkey.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = HelloMonkey.xcconfig; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* FocusCalling-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "FocusCalling-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		E1B51D121A26C19D00FFA698 /* FocusCalling.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = FocusCalling.xcconfig; sourceTree = "<group>"; };
 		E1E485BA1A26B9EA00B34CDF /* libTwilioClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTwilioClient.a; path = "../../../../../../Users/macdrive/Library/Developer/Xcode/DerivedData/HelloMonkey-cvwidvkrgpqpdweirmzptrxrklmv/Build/Products/Debug-iphoneos/libTwilioClient.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -349,10 +349,10 @@
 				81FD0F461A9A49A60055432C /* NSString+Superpoints.m */,
 				81FD0E3B1A9A45910055432C /* SPAPIManager.h */,
 				81FD0E3C1A9A45910055432C /* SPAPIManager.m */,
-				1D3623240D0F684500981E51 /* HelloMonkeyAppDelegate.h */,
-				1D3623250D0F684500981E51 /* HelloMonkeyAppDelegate.m */,
-				28D7ACF60DDB3853001CB0EB /* HelloMonkeyViewController.h */,
-				28D7ACF70DDB3853001CB0EB /* HelloMonkeyViewController.m */,
+				1D3623240D0F684500981E51 /* FocusCallingAppDelegate.h */,
+				1D3623250D0F684500981E51 /* FocusCallingAppDelegate.m */,
+				28D7ACF60DDB3853001CB0EB /* FocusCallingViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* FocusCallingViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -360,7 +360,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* HelloMonkey.app */,
+				1D6058910D05DD3D006BFB54 /* FocusCalling.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -382,7 +382,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				32CA4F630368D1EE00C91783 /* HelloMonkey_Prefix.pch */,
+				32CA4F630368D1EE00C91783 /* FocusCalling_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
@@ -392,9 +392,9 @@
 			isa = PBXGroup;
 			children = (
 				868E319F1993FAE60059FC01 /* Default-568h@2x.png */,
-				2899E5210DE3E06400AC0155 /* HelloMonkeyViewController.xib */,
+				2899E5210DE3E06400AC0155 /* FocusCallingViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
-				8D1107310486CEB800E47090 /* HelloMonkey-Info.plist */,
+				8D1107310486CEB800E47090 /* FocusCalling-Info.plist */,
 				80250E2A13B17073009B4E18 /* dial.png */,
 				8025114413B3C0C9009B4E18 /* hangup.png */,
 				819FCFF51A9DA6FB008BEC2B /* answer.png */,
@@ -845,7 +845,7 @@
 		E1B51D101A26C19D00FFA698 /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
-				E1B51D121A26C19D00FFA698 /* HelloMonkey.xcconfig */,
+				E1B51D121A26C19D00FFA698 /* FocusCalling.xcconfig */,
 			);
 			path = Configurations;
 			sourceTree = "<group>";
@@ -853,9 +853,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* HelloMonkey */ = {
+		1D6058900D05DD3D006BFB54 /* FocusCalling */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "HelloMonkey" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "FocusCalling" */;
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
@@ -866,9 +866,9 @@
 			);
 			dependencies = (
 			);
-			name = HelloMonkey;
+			name = FocusCalling;
 			productName = HelloMonkey;
-			productReference = 1D6058910D05DD3D006BFB54 /* HelloMonkey.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* FocusCalling.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -884,7 +884,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "HelloMonkey" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "FocusCalling" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -904,7 +904,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* HelloMonkey */,
+				1D6058900D05DD3D006BFB54 /* FocusCalling */,
 			);
 		};
 /* End PBXProject section */
@@ -965,7 +965,7 @@
 				81FD10381A9A4AF50055432C /* Pods-MMDrawerController-Private.xcconfig in Resources */,
 				81FD10261A9A4AF50055432C /* Pods-acknowledgements.plist in Resources */,
 				81FD10331A9A4AF50055432C /* Pods-FrameAccessor.xcconfig in Resources */,
-				2899E5220DE3E06400AC0155 /* HelloMonkeyViewController.xib in Resources */,
+				2899E5220DE3E06400AC0155 /* FocusCallingViewController.xib in Resources */,
 				81FD100D1A9A4AF50055432C /* LICENSE in Resources */,
 				81FD10281A9A4AF50055432C /* Pods-resources.sh in Resources */,
 				80250E2B13B17073009B4E18 /* dial.png in Resources */,
@@ -1045,7 +1045,7 @@
 				81FD0E3D1A9A45910055432C /* SPAPIManager.m in Sources */,
 				81FD10011A9A4AF50055432C /* AFNetworkActivityLogger.m in Sources */,
 				81FD102B1A9A4AF50055432C /* Pods-AFNetworkActivityLogger-dummy.m in Sources */,
-				1D3623260D0F684500981E51 /* HelloMonkeyAppDelegate.m in Sources */,
+				1D3623260D0F684500981E51 /* FocusCallingAppDelegate.m in Sources */,
 				81FD10231A9A4AF50055432C /* UIViewController+MMDrawerController.m in Sources */,
 				81FD10141A9A4AF50055432C /* UIProgressView+AFNetworking.m in Sources */,
 				81FD10081A9A4AF50055432C /* AFSecurityPolicy.m in Sources */,
@@ -1058,7 +1058,7 @@
 				81FD10071A9A4AF50055432C /* AFNetworkReachabilityManager.m in Sources */,
 				81FD10151A9A4AF50055432C /* UIRefreshControl+AFNetworking.m in Sources */,
 				81FD100B1A9A4AF50055432C /* AFURLResponseSerialization.m in Sources */,
-				28D7ACF80DDB3853001CB0EB /* HelloMonkeyViewController.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* FocusCallingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1080,10 +1080,10 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = HelloMonkey_Prefix.pch;
-				INFOPLIST_FILE = "HelloMonkey-Info.plist";
+				GCC_PREFIX_HEADER = FocusCalling_Prefix.pch;
+				INFOPLIST_FILE = "FocusCalling-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = HelloMonkey;
+				PRODUCT_NAME = FocusCalling;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -1101,10 +1101,10 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = HelloMonkey_Prefix.pch;
-				INFOPLIST_FILE = "HelloMonkey-Info.plist";
+				GCC_PREFIX_HEADER = FocusCalling_Prefix.pch;
+				INFOPLIST_FILE = "FocusCalling-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = HelloMonkey;
+				PRODUCT_NAME = FocusCalling;
 				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1112,7 +1112,7 @@
 		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1B51D121A26C19D00FFA698 /* HelloMonkey.xcconfig */;
+			baseConfigurationReference = E1B51D121A26C19D00FFA698 /* FocusCalling.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
@@ -1127,7 +1127,7 @@
 		};
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1B51D121A26C19D00FFA698 /* HelloMonkey.xcconfig */;
+			baseConfigurationReference = E1B51D121A26C19D00FFA698 /* FocusCalling.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
@@ -1143,7 +1143,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "HelloMonkey" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "FocusCalling" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
@@ -1152,7 +1152,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "HelloMonkey" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "FocusCalling" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,

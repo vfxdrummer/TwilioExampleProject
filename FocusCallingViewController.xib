@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HelloMonkeyViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FocusCallingViewController">
             <connections>
                 <outlet property="_answerButton" destination="Oni-hm-5IN" id="VVU-uO-fiD"/>
                 <outlet property="_dialButton" destination="8" id="xWN-Pw-Zdl"/>

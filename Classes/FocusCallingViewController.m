@@ -5,12 +5,12 @@
 //  Twilio Terms of Service located at http://www.twilio.com/legal/tos
 //
  
-#import "HelloMonkeyViewController.h"
-#import "HelloMonkeyAppDelegate.h"
+#import "FocusCallingViewController.h"
+#import "FocusCallingAppDelegate.h"
 #import "SPAPIManager.h"
 #import "TwilioClient.h"
 
-@interface HelloMonkeyViewController() <TCDeviceDelegate,TCConnectionDelegate,UIGestureRecognizerDelegate>
+@interface FocusCallingViewController() <TCDeviceDelegate,TCConnectionDelegate,UIGestureRecognizerDelegate>
 {
     TCDevice* _phone;
     TCConnection* _connection;
@@ -22,7 +22,7 @@
 }
 @end
 
-@implementation HelloMonkeyViewController
+@implementation FocusCallingViewController
 
 - (void)viewDidLoad
 {
