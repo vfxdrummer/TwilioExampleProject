@@ -10,7 +10,7 @@
 #import "SPAPIManager.h"
 #import "TwilioClient.h"
 
-@interface HelloMonkeyViewController() <TCDeviceDelegate,TCConnectionDelegate>
+@interface HelloMonkeyViewController() <TCDeviceDelegate,TCConnectionDelegate,UIGestureRecognizerDelegate>
 {
     TCDevice* _phone;
     TCConnection* _connection;
@@ -22,6 +22,21 @@
 - (void)viewDidLoad
 {
   [[TwilioClient sharedInstance] setLogLevel:TC_LOG_DEBUG];
+  [[NSNotificationCenter defaultCenter] addObserver:self
+                                           selector:@selector(fromTextChanged:)
+                                               name:UITextFieldTextDidEndEditingNotification
+                                             object:self.fromField];
+  
+  // tap gesture recognizer
+  UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+  tapGesture.cancelsTouchesInView = NO;
+  tapGesture.delegate = self;
+  [self.view addGestureRecognizer:tapGesture];
+  
+  [self updateTwilioToken];
+}
+
+- (void)updateTwilioToken {
   [[SPAPIManager sharedManager] tokenForUser:self.fromField.text
                                 successBlock:^void(NSString* token) {
                                   _phone = [[TCDevice alloc] initWithCapabilityToken:token delegate:self];
@@ -33,19 +48,23 @@
                                 }];
 }
 
+- (void) fromTextChanged:(id)notification {
+  [self updateTwilioToken];
+}
+
 - (IBAction)dialButtonPressed:(id)sender
 {
   NSDictionary *params = @{@"To": self.toField.text};
-  [[SPAPIManager sharedManager] tokenForUser:self.fromField.text
-                                successBlock:^void(NSString* token) {
-                                  _phone = [[TCDevice alloc] initWithCapabilityToken:token delegate:self];
+//  [[SPAPIManager sharedManager] tokenForUser:self.fromField.text
+//                                successBlock:^void(NSString* token) {
+//                                  _phone = [[TCDevice alloc] initWithCapabilityToken:token delegate:self];
                                   _connection = [_phone connect:params delegate:self];
                                   
-                                } failureBlock:^(NSString* message) {
-                                  
-                                }  networkBlock:^(NSError* error) {
-                                  NSLog(@"Error retrieving token: %@", [error localizedDescription]);
-                                }];
+//                                } failureBlock:^(NSString* message) {
+//                                  
+//                                }  networkBlock:^(NSError* error) {
+//                                  NSLog(@"Error retrieving token: %@", [error localizedDescription]);
+//                                }];
 }
 
 - (IBAction)hangupButtonPressed:(id)sender
@@ -92,6 +111,19 @@
 - (void)connectionDidStartConnecting:(TCConnection *)connection
 {
   
+}
+
+#pragma mark -
+
+- (void)dismissKeyboard {
+  [self.view endEditing:YES];
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+  if ([touch.view isKindOfClass:[UIButton class]]) {
+    return NO;
+  }
+  return YES;
 }
 
 @end
