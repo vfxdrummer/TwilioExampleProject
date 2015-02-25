@@ -22,6 +22,10 @@
 		8025114513B3C0C9009B4E18 /* hangup.png in Resources */ = {isa = PBXBuildFile; fileRef = 8025114413B3C0C9009B4E18 /* hangup.png */; };
 		804A5F2D13D0C3F400512DC5 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 804A5F2C13D0C3F400512DC5 /* icon.png */; };
 		804E507E14D23CEA0040A80E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 804E507D14D23CEA0040A80E /* AVFoundation.framework */; };
+		819FCFF91A9DA6FB008BEC2B /* answer.png in Resources */ = {isa = PBXBuildFile; fileRef = 819FCFF51A9DA6FB008BEC2B /* answer.png */; };
+		819FCFFA1A9DA6FB008BEC2B /* dial.png in Resources */ = {isa = PBXBuildFile; fileRef = 819FCFF61A9DA6FB008BEC2B /* dial.png */; };
+		819FCFFB1A9DA6FB008BEC2B /* hangup.png in Resources */ = {isa = PBXBuildFile; fileRef = 819FCFF71A9DA6FB008BEC2B /* hangup.png */; };
+		819FCFFC1A9DA6FB008BEC2B /* ignore.png in Resources */ = {isa = PBXBuildFile; fileRef = 819FCFF81A9DA6FB008BEC2B /* ignore.png */; };
 		81FD0E3D1A9A45910055432C /* SPAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81FD0E3C1A9A45910055432C /* SPAPIManager.m */; };
 		81FD0F471A9A49A60055432C /* NSString+Superpoints.m in Sources */ = {isa = PBXBuildFile; fileRef = 81FD0F461A9A49A60055432C /* NSString+Superpoints.m */; };
 		81FD10011A9A4AF50055432C /* AFNetworkActivityLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 81FD0F4C1A9A4AF50055432C /* AFNetworkActivityLogger.m */; };
@@ -152,6 +156,10 @@
 		804A5F2C13D0C3F400512DC5 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Images/icon.png; sourceTree = "<group>"; };
 		804E507D14D23CEA0040A80E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		819FCFEC1A9D23E1008BEC2B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		819FCFF51A9DA6FB008BEC2B /* answer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = answer.png; path = Images/answer.png; sourceTree = "<group>"; };
+		819FCFF61A9DA6FB008BEC2B /* dial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dial.png; path = Images/dial.png; sourceTree = "<group>"; };
+		819FCFF71A9DA6FB008BEC2B /* hangup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hangup.png; path = Images/hangup.png; sourceTree = "<group>"; };
+		819FCFF81A9DA6FB008BEC2B /* ignore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ignore.png; path = Images/ignore.png; sourceTree = "<group>"; };
 		81FD0E3B1A9A45910055432C /* SPAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPAPIManager.h; sourceTree = "<group>"; };
 		81FD0E3C1A9A45910055432C /* SPAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPAPIManager.m; sourceTree = "<group>"; };
 		81FD0F451A9A49A60055432C /* NSString+Superpoints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Superpoints.h"; sourceTree = "<group>"; };
@@ -389,6 +397,10 @@
 				8D1107310486CEB800E47090 /* HelloMonkey-Info.plist */,
 				80250E2A13B17073009B4E18 /* dial.png */,
 				8025114413B3C0C9009B4E18 /* hangup.png */,
+				819FCFF51A9DA6FB008BEC2B /* answer.png */,
+				819FCFF61A9DA6FB008BEC2B /* dial.png */,
+				819FCFF71A9DA6FB008BEC2B /* hangup.png */,
+				819FCFF81A9DA6FB008BEC2B /* ignore.png */,
 				804A5F2C13D0C3F400512DC5 /* icon.png */,
 			);
 			name = Resources;
@@ -949,6 +961,7 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				81FD102D1A9A4AF50055432C /* Pods-AFNetworkActivityLogger.xcconfig in Resources */,
+				819FCFF91A9DA6FB008BEC2B /* answer.png in Resources */,
 				81FD10381A9A4AF50055432C /* Pods-MMDrawerController-Private.xcconfig in Resources */,
 				81FD10261A9A4AF50055432C /* Pods-acknowledgements.plist in Resources */,
 				81FD10331A9A4AF50055432C /* Pods-FrameAccessor.xcconfig in Resources */,
@@ -960,6 +973,7 @@
 				81FD101C1A9A4AF50055432C /* LICENSE in Resources */,
 				81FD102F1A9A4AF50055432C /* Pods-AFNetworking-Private.xcconfig in Resources */,
 				81FD101F1A9A4AF50055432C /* LICENSE in Resources */,
+				819FCFFB1A9DA6FB008BEC2B /* hangup.png in Resources */,
 				81FD102A1A9A4AF50055432C /* Pods.release.xcconfig in Resources */,
 				81FD102C1A9A4AF50055432C /* Pods-AFNetworkActivityLogger-Private.xcconfig in Resources */,
 				81FD101B1A9A4AF50055432C /* Manifest.lock in Resources */,
@@ -971,8 +985,10 @@
 				81FD10321A9A4AF50055432C /* Pods-FrameAccessor-Private.xcconfig in Resources */,
 				804A5F2D13D0C3F400512DC5 /* icon.png in Resources */,
 				868E31A01993FAE60059FC01 /* Default-568h@2x.png in Resources */,
+				819FCFFA1A9DA6FB008BEC2B /* dial.png in Resources */,
 				81FD10301A9A4AF50055432C /* Pods-AFNetworking.xcconfig in Resources */,
 				81FD10351A9A4AF50055432C /* Pods-MBProgressHUD-Private.xcconfig in Resources */,
+				819FCFFC1A9DA6FB008BEC2B /* ignore.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

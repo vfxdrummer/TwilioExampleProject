@@ -14,6 +14,11 @@
 {
     TCDevice* _phone;
     TCConnection* _connection;
+  
+  __weak IBOutlet UIButton* _dialButton;
+  __weak IBOutlet UIButton* _hangupButton;
+  __weak IBOutlet UIButton* _answerButton;
+  __weak IBOutlet UIButton* _ignoreButton;
 }
 @end
 
@@ -33,7 +38,24 @@
   tapGesture.delegate = self;
   [self.view addGestureRecognizer:tapGesture];
   
+  // set initial button visibility
+  [self setDialButtonState];
+  
   [self updateTwilioToken];
+}
+
+- (void)setDialButtonState {
+  [_dialButton   setHidden:NO];
+  [_hangupButton setHidden:NO];
+  [_answerButton setHidden:YES];
+  [_ignoreButton setHidden:YES];
+}
+
+- (void)setAnswerButtonState {
+  [_dialButton   setHidden:YES];
+  [_hangupButton setHidden:YES];
+  [_answerButton setHidden:NO];
+  [_ignoreButton setHidden:NO];
 }
 
 - (void)updateTwilioToken {
@@ -55,21 +77,24 @@
 - (IBAction)dialButtonPressed:(id)sender
 {
   NSDictionary *params = @{@"To": self.toField.text};
-//  [[SPAPIManager sharedManager] tokenForUser:self.fromField.text
-//                                successBlock:^void(NSString* token) {
-//                                  _phone = [[TCDevice alloc] initWithCapabilityToken:token delegate:self];
-                                  _connection = [_phone connect:params delegate:self];
-                                  
-//                                } failureBlock:^(NSString* message) {
-//                                  
-//                                }  networkBlock:^(NSError* error) {
-//                                  NSLog(@"Error retrieving token: %@", [error localizedDescription]);
-//                                }];
+  _connection = [_phone connect:params delegate:self];
 }
 
 - (IBAction)hangupButtonPressed:(id)sender
 {
     [_connection disconnect];
+}
+
+- (IBAction)answerButtonPressed:(id)sender
+{
+  [_connection accept];
+  [self setDialButtonState];
+}
+
+- (IBAction)ignoreButtonPressed:(id)sender
+{
+  [_connection reject];
+  [self setDialButtonState];
 }
 
 - (void)device:(TCDevice *)device didReceiveIncomingConnection:(TCConnection *)connection
@@ -78,7 +103,8 @@
     if (device.state == TCDeviceStateBusy) {
         [connection reject];
     } else {
-        [connection accept];
+      //        [connection accept];
+        [self setAnswerButtonState];
         _connection = connection;
     }
 }
