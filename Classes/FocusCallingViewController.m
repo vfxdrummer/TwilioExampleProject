@@ -15,6 +15,8 @@
     TCDevice* _phone;
     TCConnection* _connection;
   
+  BOOL _flashingOn;
+  
   __weak IBOutlet UIButton* _dialButton;
   __weak IBOutlet UIButton* _hangupButton;
   __weak IBOutlet UIButton* _answerButton;
@@ -38,9 +40,8 @@
   tapGesture.delegate = self;
   [self.view addGestureRecognizer:tapGesture];
   
-  // set initial button visibility
+  _flashingOn = NO;
   [self setDialButtonState];
-  
   [self updateTwilioToken];
 }
 
@@ -49,6 +50,7 @@
   [_hangupButton setHidden:NO];
   [_answerButton setHidden:YES];
   [_ignoreButton setHidden:YES];
+  [self deactivateFlashing:_answerButton];
 }
 
 - (void)setAnswerButtonState {
@@ -56,6 +58,7 @@
   [_hangupButton setHidden:YES];
   [_answerButton setHidden:NO];
   [_ignoreButton setHidden:NO];
+  [self activateFlashing:_answerButton];
 }
 
 - (void)updateTwilioToken {
@@ -78,11 +81,14 @@
 {
   NSDictionary *params = @{@"To": self.toField.text};
   _connection = [_phone connect:params delegate:self];
+  [self activateFlashing:_dialButton];
 }
 
 - (IBAction)hangupButtonPressed:(id)sender
 {
-    [_connection disconnect];
+  [_connection disconnect];
+  [self deactivateFlashing:_dialButton];
+  [self deactivateFlashing:_answerButton];
 }
 
 - (IBAction)answerButtonPressed:(id)sender
@@ -103,7 +109,6 @@
     if (device.state == TCDeviceStateBusy) {
         [connection reject];
     } else {
-      //        [connection accept];
         [self setAnswerButtonState];
         _connection = connection;
     }
@@ -121,22 +126,60 @@
 
 - (void)connection:(TCConnection *)connection didFailWithError:(NSError *)error
 {
-  
+  [self deactivateFlashing:_dialButton];
+  [self deactivateFlashing:_answerButton];
 }
 
 - (void)connectionDidConnect:(TCConnection *)connection
 {
-  
+  [self activateFlashing:_dialButton];
 }
 
 - (void)connectionDidDisconnect:(TCConnection *)connection
 {
-  
+  [self deactivateFlashing:_dialButton];
 }
 
 - (void)connectionDidStartConnecting:(TCConnection *)connection
 {
   
+}
+
+#pragma mark -
+
+- (void)flashOff:(UIView *)v
+{
+  [UIView animateWithDuration:2.0 delay:0 options:UIViewAnimationOptionAllowUserInteraction animations:^ {
+    v.alpha = .01;  //don't animate alpha to 0, otherwise you won't be able to interact with it
+  } completion:^(BOOL finished) {
+    [self flashOn:v];
+  }];
+}
+
+- (void)flashOn:(UIView *)v
+{
+  [UIView animateWithDuration:2.0 delay:0 options:UIViewAnimationOptionAllowUserInteraction animations:^ {
+    v.alpha = 1;
+  } completion:^(BOOL finished) {
+    if (_flashingOn) {
+      [self flashOff:v];
+    }
+  }];
+}
+
+- (void)activateFlashing:(UIView *)v
+{
+  if (!_flashingOn) {
+    _flashingOn = YES;
+    [self flashOn:v];
+  }
+}
+
+- (void)deactivateFlashing:(UIView *)v
+{
+  if (_flashingOn) {
+    _flashingOn = NO;
+  }
 }
 
 #pragma mark -
