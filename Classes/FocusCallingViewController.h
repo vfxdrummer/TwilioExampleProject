@@ -6,8 +6,9 @@
 //
  
 #import <UIKit/UIKit.h>
+#import <OpenEars/OEEventsObserver.h>
 
-@interface FocusCallingViewController : UIViewController 
+@interface FocusCallingViewController : UIViewController <OEEventsObserverDelegate>
 
 @property (nonatomic, strong) IBOutlet UITextField *fromField;
 @property (nonatomic, strong) IBOutlet UITextField *toField;

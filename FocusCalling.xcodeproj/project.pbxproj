@@ -22,6 +22,10 @@
 		8025114513B3C0C9009B4E18 /* hangup.png in Resources */ = {isa = PBXBuildFile; fileRef = 8025114413B3C0C9009B4E18 /* hangup.png */; };
 		804A5F2D13D0C3F400512DC5 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 804A5F2C13D0C3F400512DC5 /* icon.png */; };
 		804E507E14D23CEA0040A80E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 804E507D14D23CEA0040A80E /* AVFoundation.framework */; };
+		8134942A1AE4547A005A2182 /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 813494261AE4547A005A2182 /* AcousticModelEnglish.bundle */; };
+		8134942B1AE4547A005A2182 /* AcousticModelSpanish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 813494271AE4547A005A2182 /* AcousticModelSpanish.bundle */; };
+		8134942C1AE4547A005A2182 /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 813494281AE4547A005A2182 /* OpenEars.framework */; };
+		8134942D1AE4547A005A2182 /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 813494291AE4547A005A2182 /* Slt.framework */; };
 		819FCFF91A9DA6FB008BEC2B /* answer.png in Resources */ = {isa = PBXBuildFile; fileRef = 819FCFF51A9DA6FB008BEC2B /* answer.png */; };
 		819FCFFA1A9DA6FB008BEC2B /* dial.png in Resources */ = {isa = PBXBuildFile; fileRef = 819FCFF61A9DA6FB008BEC2B /* dial.png */; };
 		819FCFFB1A9DA6FB008BEC2B /* hangup.png in Resources */ = {isa = PBXBuildFile; fileRef = 819FCFF71A9DA6FB008BEC2B /* hangup.png */; };
@@ -155,6 +159,10 @@
 		8025114413B3C0C9009B4E18 /* hangup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hangup.png; path = Images/hangup.png; sourceTree = "<group>"; };
 		804A5F2C13D0C3F400512DC5 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Images/icon.png; sourceTree = "<group>"; };
 		804E507D14D23CEA0040A80E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		813494261AE4547A005A2182 /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelEnglish.bundle; sourceTree = "<group>"; };
+		813494271AE4547A005A2182 /* AcousticModelSpanish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelSpanish.bundle; sourceTree = "<group>"; };
+		813494281AE4547A005A2182 /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEars.framework; sourceTree = "<group>"; };
+		813494291AE4547A005A2182 /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Slt.framework; sourceTree = "<group>"; };
 		819FCFEC1A9D23E1008BEC2B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		819FCFF51A9DA6FB008BEC2B /* answer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = answer.png; path = Images/answer.png; sourceTree = "<group>"; };
 		819FCFF61A9DA6FB008BEC2B /* dial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dial.png; path = Images/dial.png; sourceTree = "<group>"; };
@@ -332,8 +340,10 @@
 				80250E4713B178C9009B4E18 /* CFNetwork.framework in Frameworks */,
 				E1E485BB1A26B9EA00B34CDF /* libTwilioClient.a in Frameworks */,
 				804E507E14D23CEA0040A80E /* AVFoundation.framework in Frameworks */,
+				8134942D1AE4547A005A2182 /* Slt.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				8134942C1AE4547A005A2182 /* OpenEars.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
 				80250E4313B178C4009B4E18 /* AudioToolbox.framework in Frameworks */,
 			);
@@ -372,6 +382,7 @@
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
+				8134941D1AE453E4005A2182 /* ThirdParty */,
 				81FD0F481A9A4AF50055432C /* Pods */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
@@ -421,6 +432,33 @@
 				804E507D14D23CEA0040A80E /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8134941D1AE453E4005A2182 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				813494241AE45468005A2182 /* OpenEars */,
+			);
+			name = ThirdParty;
+			sourceTree = "<group>";
+		};
+		813494241AE45468005A2182 /* OpenEars */ = {
+			isa = PBXGroup;
+			children = (
+				813494251AE4547A005A2182 /* Framework */,
+			);
+			name = OpenEars;
+			sourceTree = "<group>";
+		};
+		813494251AE4547A005A2182 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				813494261AE4547A005A2182 /* AcousticModelEnglish.bundle */,
+				813494271AE4547A005A2182 /* AcousticModelSpanish.bundle */,
+				813494281AE4547A005A2182 /* OpenEars.framework */,
+				813494291AE4547A005A2182 /* Slt.framework */,
+			);
+			path = Framework;
 			sourceTree = "<group>";
 		};
 		81FD0F481A9A4AF50055432C /* Pods */ = {
@@ -959,10 +997,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8134942A1AE4547A005A2182 /* AcousticModelEnglish.bundle in Resources */,
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				81FD102D1A9A4AF50055432C /* Pods-AFNetworkActivityLogger.xcconfig in Resources */,
 				819FCFF91A9DA6FB008BEC2B /* answer.png in Resources */,
 				81FD10381A9A4AF50055432C /* Pods-MMDrawerController-Private.xcconfig in Resources */,
+				8134942B1AE4547A005A2182 /* AcousticModelSpanish.bundle in Resources */,
 				81FD10261A9A4AF50055432C /* Pods-acknowledgements.plist in Resources */,
 				81FD10331A9A4AF50055432C /* Pods-FrameAccessor.xcconfig in Resources */,
 				2899E5220DE3E06400AC0155 /* FocusCallingViewController.xib in Resources */,
@@ -1076,6 +1116,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Framework",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1099,6 +1140,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Framework",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FocusCalling_Prefix.pch;
