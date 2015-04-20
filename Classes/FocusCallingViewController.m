@@ -112,6 +112,12 @@
   [self openEarsStartListening];
 }
 
+// get commands
+- (NSArray*)getCommands {
+  return @[@"HI"
+           ];
+}
+
 - (void)openEarsStartListening {
   if(![OEPocketsphinxController sharedInstance].isListening) {
     [[OEPocketsphinxController sharedInstance] startListeningWithLanguageModelAtPath:self.pathToDynamicallyGeneratedLanguageModel dictionaryAtPath:self.pathToDynamicallyGeneratedDictionary acousticModelAtPath:[OEAcousticModel pathToModel:@"AcousticModelEnglish"] languageModelIsJSGF:FALSE]; // Start speech recognition if we aren't already listening.
@@ -265,15 +271,16 @@
 
 #pragma mark OEEventsObserver delegate methods
 
+- (void) parseHypothesisString:(NSString*)hypothesis {
+  [self.toField setText:hypothesis];
+}
+
 // This is an optional delegate method of OEEventsObserver which delivers the text of speech that Pocketsphinx heard and analyzed, along with its accuracy score and utterance ID.
 - (void) pocketsphinxDidReceiveHypothesis:(NSString *)hypothesis recognitionScore:(NSString *)recognitionScore utteranceID:(NSString *)utteranceID {
   
   NSLog(@"Local callback: The received hypothesis is %@ with a score of %@ and an ID of %@", hypothesis, recognitionScore, utteranceID); // Log it.
   
-//  self.heardTextView.text = [NSString stringWithFormat:@"Heard: \"%@\"", hypothesis]; // Show it in the status box.
-//  
-//  // This is how to use an available instance of OEFliteController. We're going to repeat back the command that we heard with the voice we've chosen.
-//  [self.fliteController say:[NSString stringWithFormat:@"You said %@",hypothesis] withVoice:self.slt];
+  NSLog(@">>>> %@", hypothesis);
   [self.toField setText:hypothesis];
 }
 

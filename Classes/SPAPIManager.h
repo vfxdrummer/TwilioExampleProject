@@ -1,6 +1,6 @@
 //
 //  SPAPIManager.h
-//  Superpoints
+//  FocusCalling
 //
 //  Created by Allen Wu on 5/5/14.
 //  Copyright (c) 2014 Originate. All rights reserved.
@@ -43,79 +43,5 @@
         successBlock:(void (^)(NSString *))successBlock
         failureBlock:(void (^)(NSString *))failureBlock
         networkBlock:(void (^)(NSError *))networkBlock;
-
-//- (void)userWithId:(NSUInteger)userId
-//      successBlock:(void (^)(SPUser *))successBlock
-//      failureBlock:(void (^)(NSString *))failureBlock
-//      networkBlock:(void (^)(NSError *))networkBlock;
-//
-//- (void)currentUserSuccessBlock:(void (^)(SPUser *))successBlock
-//                   failureBlock:(void (^)(NSString *))failureBlock
-//                   networkBlock:(void (^)(NSError *))networkBlock;
-//
-//- (void)createUserWithFirstName:(NSString *)firstName
-//                       lastName:(NSString *)lastname
-//                          email:(NSString *)email
-//                       password:(NSString *)password
-//                   successBlock:(void (^)(SPUser *))successBlock
-//                   failureBlock:(void (^)(NSString *))failureBlock
-//                   networkBlock:(void (^)(NSError *))networkBlock;
-//
-//- (void)connectCurrentUserWithFacebookId:(NSString *)facebookId
-//                            successBlock:(void (^)(void))successBlock
-//                            failureBlock:(void (^)(NSString *))failureBlock
-//                            networkBlock:(void (^)(NSError *))networkBlock;
-//
-//- (void)resetPasswordForEmail:(NSString *)email
-//                 successBlock:(void (^)(void))successBlock
-//                 failureBlock:(void (^)(NSString *))failureBlock
-//                 networkBlock:(void (^)(NSError *))networkBlock;
-//
-//- (void)eventBlueprintsSuccessBlock:(void (^)(void))successBlock
-//                       failureBlock:(void (^)(NSString *))failureBlock
-//                       networkBlock:(void (^)(NSError *))networkBlock;
-//
-//- (void)membershipLevelsSuccessBlock:(void (^)(NSDictionary *))successBlock
-//                        failureBlock:(void (^)(NSString *))failureBlock
-//                        networkBlock:(void (^)(NSError *))networkBlock;
-//
-//- (void)pointsHistorySuccessBlock:(void (^)(NSArray *))successBlock
-//                     failureBlock:(void (^)(NSString *))failureBlock
-//                     networkBlock:(void (^)(NSError *))networkBlock;
-//
-//- (void)sponsorshipOpportunitiesSuccessBlock:(void (^)(NSArray *))successBlock
-//                                failureBlock:(void (^)(NSString *))failureBlock
-//                                networkBlock:(void (^)(NSError *))networkBlock;
-//
-//- (void)rewardsDetailed:(void (^)(NSArray *))successBlock
-//           failureBlock:(void (^)(NSString *))failureBlock
-//           networkBlock:(void (^)(NSError *))networkBlock;
-//
-//- (void)rewardsAimable:(void (^)(NSArray *))successBlock
-//          failureBlock:(void (^)(NSString *))failureBlock
-//          networkBlock:(void (^)(NSError *))networkBlock;
-//
-//- (void)redeemRewardId:(NSInteger)rewardId
-//          successBlock:(void (^)(void))successBlock
-//          failureBlock:(void (^)(NSString *))failureBlock
-//          networkBlock:(void (^)(NSError *))networkBlock;
-//
-//- (void)aimForRewardId:(NSInteger)rewardId
-//          successBlock:(void (^)(void))successBlock
-//          failureBlock:(void (^)(NSString *))failureBlock
-//          networkBlock:(void (^)(NSError *))networkBlock;
-//
-//- (void)childrenSuccessBlock:(void (^)(NSArray *))successBlock
-//                failureBlock:(void (^)(NSString *))failureBlock
-//                networkBlock:(void (^)(NSError *))networkBlock;
-//
-//- (void)sponsorUserId:(NSInteger)userId
-//         successBlock:(void (^)(void))successBlock
-//         failureBlock:(void (^)(NSString *))failureBlock
-//         networkBlock:(void (^)(NSError *))networkBlock;
-//
-//- (void)superLuckyButtonSuccessBlock:(void (^)(void))successBlock
-//                        failureBlock:(void (^)(NSString *))failureBlock
-//                        networkBlock:(void (^)(NSError *))networkBlock;
 
 @end

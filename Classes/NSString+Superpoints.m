@@ -1,14 +1,14 @@
 //
-//  NSString+Superpoints.m
-//  Superpoints
+//  NSString+FocusCalling.m
+//  FocusCalling
 //
 //  Created by Allen Wu on 11/13/14.
 //  Copyright (c) 2014 Originate. All rights reserved.
 //
 
-#import "NSString+Superpoints.h"
+#import "NSString+FocusCalling.h"
 
-@implementation NSString (Superpoints)
+@implementation NSString (FocusCalling)
 
 - (BOOL)isNotBlank {
   return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]].length > 0;
